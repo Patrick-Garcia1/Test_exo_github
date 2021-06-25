@@ -1,0 +1,65 @@
+
+/*Je vous propose d'utiliser les media queries pour changer l'apparence du site sur les résolutions inférieures à 1 024 px de largeur. 
+Nous allons opérer les modifications suivantes :
+
+    le menu de navigation en haut à droite sera disposé en hauteur plutôt qu'en largeur, et les liens seront écrits en plus petit ;
+
+    la bannière avec le pont de San Francisco (le Golden Gate) sera supprimée, car elle prend beaucoup de place et n'apporte pas beaucoup d'informations ;
+
+    le bloc <aside>  « À propos de l'auteur » sera placé sous l'article (et non pas à côté), et son contenu sera réorganisé (la photo de Zozor sera positionnée en flottant).*/
+
+
+@media screen and (max-width: 1024px)
+{
+    header{
+        width: 100%;
+        align-items: flex-end;
+    }
+    nav ul li{
+        font-size: 1.2em;
+    }
+    #entete{
+        width: 20%;
+    }
+    nav{
+        width: 20%;
+        margin-top: 0;
+
+    }
+    nav ul{
+        display: block;
+        
+    }
+    #sanfrancisco{
+        display: none;
+    }
+    section{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #main{
+        margin: 0 20px;
+    }
+    #main section{
+        width: 100%;
+    }
+    section aside{
+        margin-bottom: 20px;
+    }
+    #bubulle{
+
+        display: none;
+    }
+    #zozo{ 
+        float: right;
+        margin: 0 0 0 10px;
+    
+    }
+    #zozo img{
+        width: 80%;
+    }
+    #rsociaux{
+        text-align: center;
+    }
+}
